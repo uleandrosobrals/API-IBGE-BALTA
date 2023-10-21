@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cdufqy2lmIWlLwT+F63ozE9OKU9Y2KJT5XBVwiWHWcE=",
+  "Source": "API-IBGE",
+  "BasePath": "_content/API-IBGE",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
