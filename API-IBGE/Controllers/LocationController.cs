@@ -1,11 +1,13 @@
 ﻿using API_IBGE.Entities;
 using API_IBGE.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_IBGE.Controllers
 {
     [Route("api/v1/locations")]
     [ApiController]
+    [Authorize]
     public class LocationController : ControllerBase
     {
         private readonly ILocationService _locationService;
