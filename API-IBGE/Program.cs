@@ -1,10 +1,15 @@
 using API_IBGE.Data.Context;
 using API_IBGE.Data.Repositories;
+using API_IBGE.Entities;
 using API_IBGE.Interfaces.Repositories;
 using API_IBGE.Interfaces.Services;
 using API_IBGE.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +22,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Configurar a injeção de dependência
 builder.Services.AddScoped<ILocationRepository, LocationRepository>();
 builder.Services.AddScoped<ILocationService, LocationService>();
+builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped<AuthorizationService>();
+
+
+builder.Services
+    .AddIdentity<Usuario, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
 builder.Services.AddControllers();
@@ -26,7 +41,21 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "API IBGE BALTA", Version = "v1" });
 });
 
-
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme =
+        JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("inpib!b324onr28r*)*$)*ójú15648cpyi")),
+        ValidateAudience = false,
+        ValidateIssuer = false,
+        ClockSkew = TimeSpan.Zero
+    };
+});
 
 var app = builder.Build();
 
@@ -40,5 +69,5 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
-
+app.UseAuthentication();
 app.Run();
