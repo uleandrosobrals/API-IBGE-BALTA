@@ -1,0 +1,5 @@
+dotnet restore
+
+dotnet publish --no-restore -c Release -o {}
+
+./out
