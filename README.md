@@ -43,6 +43,14 @@ Certifique-se de configurar as seguintes informações no projeto:
 
 - **Políticas de Autorização**: Configure as políticas de autorização para controlar o acesso às diferentes partes da API com base nos papéis dos usuários.
 
+
+## Autores
+
+    Leandro Sobral
+    Elanã Scarabeli
+    Murilo Cavalcanti
+
+
 ## Uso
 
 Você pode usar as rotas definidas na API para acessar as funcionalidades. Veja a documentação Swagger para obter detalhes sobre como usar cada endpoint.
@@ -60,12 +68,4 @@ Content-Type: application/json
 ```
 
 
-## Autores
 
-    Leandro Sobral
-    Elanã Scarabeli
-    Murilo Cavalcanti
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE para obter detalhes.
