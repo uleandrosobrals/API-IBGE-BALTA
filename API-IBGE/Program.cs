@@ -15,14 +15,11 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 //// Configurar a conexão com o banco de dados SQL Server
-//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//    options.UseSqlServer(connectionString));
-
-// Configurar a conexão com o banco de dados MySQL
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-         options.UseMySql(connectionString, ServerVersion.Parse("8.0.33-mysql")));
+    options.UseSqlServer(connectionString));
+
+
 
 
 // Configurar a injeção de dependência

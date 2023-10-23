@@ -10,7 +10,7 @@ using System.Text;
 
 namespace API_IBGE.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/account")]
     [ApiController]
     public class AccountController : ControllerBase
     {
