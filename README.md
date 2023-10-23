@@ -44,11 +44,11 @@ Certifique-se de configurar as seguintes informações no projeto:
 - **Políticas de Autorização**: Configure as políticas de autorização para controlar o acesso às diferentes partes da API com base nos papéis dos usuários.
 
 
-## Autores
+### Autores
 
-    Leandro Sobral
-    Elanã Scarabeli
-    Murilo Cavalcanti
+   - **Leandro Sobral**
+   - **Elanã Scarabeli**
+   - **Murilo Cavalcanti**
 
 
 ## Uso
