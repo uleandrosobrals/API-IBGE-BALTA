@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Leandro Sobral\\Desktop\\repositórios\\API-IBGE\\API-IBGE\\API-IBGE.csproj": {}
+    "C:\\APIs\\API-IBGE-BALTA\\API-IBGE\\API-IBGE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Leandro Sobral\\Desktop\\repositórios\\API-IBGE\\API-IBGE\\API-IBGE.csproj": {
+    "C:\\APIs\\API-IBGE-BALTA\\API-IBGE\\API-IBGE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Leandro Sobral\\Desktop\\repositórios\\API-IBGE\\API-IBGE\\API-IBGE.csproj",
+        "projectUniqueName": "C:\\APIs\\API-IBGE-BALTA\\API-IBGE\\API-IBGE.csproj",
         "projectName": "API-IBGE",
-        "projectPath": "C:\\Users\\Leandro Sobral\\Desktop\\repositórios\\API-IBGE\\API-IBGE\\API-IBGE.csproj",
-        "packagesPath": "C:\\Users\\Leandro Sobral\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Leandro Sobral\\Desktop\\repositórios\\API-IBGE\\API-IBGE\\obj\\",
+        "projectPath": "C:\\APIs\\API-IBGE-BALTA\\API-IBGE\\API-IBGE.csproj",
+        "packagesPath": "C:\\Users\\Scarabeli\\.nuget\\packages\\",
+        "outputPath": "C:\\APIs\\API-IBGE-BALTA\\API-IBGE\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Leandro Sobral\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Scarabeli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,6 +45,18 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.7, )"
@@ -52,6 +68,14 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.12, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -77,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
